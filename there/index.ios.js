@@ -5,8 +5,12 @@
  */
 
 import React, { Component } from 'react';
-import {AppRegistry} from 'react-native';
+import {AppRegistry, Text} from 'react-native';
 import Main from './src/views/Main'
+import {StackNavigator} from 'react-navigation'
 
+const App = StackNavigator({
+	Main: {screen: Main}
+})
 
-AppRegistry.registerComponent('there', () => Main);
+AppRegistry.registerComponent('there', () => App);
