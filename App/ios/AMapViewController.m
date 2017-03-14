@@ -11,7 +11,10 @@
   
   ///初始化地图
   MAMapView *_mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
-  
+  _mapView.scrollEnabled = YES;
+  _mapView.zoomEnabled = YES;
+  [_mapView setZoomLevel:17.5 animated:YES];
+
   ///把地图添加至view
   [self.view addSubview:_mapView];
   
