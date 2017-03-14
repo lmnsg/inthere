@@ -7,7 +7,8 @@
 //
 
 #import <React/RCTViewManager.h>
-#import <MapKit/MapKit.h>
+#import <MAMapKit/MAMapKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
 
 @interface RCTAmpManager : RCTViewManager
 @end
@@ -18,7 +19,9 @@
 RCT_EXPORT_MODULE();
 
 - (UIView *)view {
-  return [[MKMapView alloc] init];
+  [AMapServices sharedServices].enableHTTPS = YES;
+  
+  return [[MAMapView alloc] initWithFrame:self.view.bounds];
 }
 
 @end

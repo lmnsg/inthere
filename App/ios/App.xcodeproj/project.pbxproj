@@ -46,7 +46,10 @@
 		98C629A397C249F78E0B8156 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A7DFE647A5494BB9DE0609 /* libRNVectorIcons.a */; };
 		AE6979F0363D464F969D8EA7 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F983D33198164CDE9467103D /* Entypo.ttf */; };
 		BC27B16159784BC2A3014356 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD52ABD8D56C4FC49B230776 /* Ionicons.ttf */; };
-		BE1BBF511E768AE200C85B58 /* RCTAmpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BBF501E768AE200C85B58 /* RCTAmpManager.m */; };
+		BE5EA4691E77D63500F60B94 /* RCTAMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5EA4661E77D63500F60B94 /* RCTAMapView.m */; };
+		BE5EA46A1E77D63500F60B94 /* RCTAMapViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5EA4681E77D63500F60B94 /* RCTAMapViewManager.m */; };
+		BE5EA46C1E77ED4B00F60B94 /* AMapViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = BE5EA46B1E77ED4B00F60B94 /* AMapViewController.h */; };
+		BE5EA46E1E77F76B00F60B94 /* AMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5EA46D1E77F76B00F60B94 /* AMapViewController.m */; };
 		CB90406C17FF4A2EA40F594F /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87C53DA578B54F89A68FDFAD /* EvilIcons.ttf */; };
 		F6F978196A4974CD945CE707 /* libPods-App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E64088BF2EDECB6285756F /* libPods-App.a */; };
 /* End PBXBuildFile section */
@@ -284,7 +287,12 @@
 		B5E4ACE2D1E043AA81D175BB /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		BAE8785F01E94682AC0AEF22 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		BD52ABD8D56C4FC49B230776 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
-		BE1BBF501E768AE200C85B58 /* RCTAmpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTAmpManager.m; sourceTree = "<group>"; };
+		BE5EA4651E77D63500F60B94 /* RCTAMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTAMapView.h; path = ../../../ReactNativeGoogleMaps/iOS/RCTGoogleMapView/RCTAMapView.h; sourceTree = "<group>"; };
+		BE5EA4661E77D63500F60B94 /* RCTAMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTAMapView.m; path = ../../../ReactNativeGoogleMaps/iOS/RCTGoogleMapView/RCTAMapView.m; sourceTree = "<group>"; };
+		BE5EA4671E77D63500F60B94 /* RCTAMapViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTAMapViewManager.h; path = ../../../ReactNativeGoogleMaps/iOS/RCTGoogleMapView/RCTAMapViewManager.h; sourceTree = "<group>"; };
+		BE5EA4681E77D63500F60B94 /* RCTAMapViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTAMapViewManager.m; path = ../../../ReactNativeGoogleMaps/iOS/RCTGoogleMapView/RCTAMapViewManager.m; sourceTree = "<group>"; };
+		BE5EA46B1E77ED4B00F60B94 /* AMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMapViewController.h; sourceTree = "<group>"; };
+		BE5EA46D1E77F76B00F60B94 /* AMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMapViewController.m; sourceTree = "<group>"; };
 		C315F6A9795C459C97D5F9C9 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		CB970FFFB6B441D2B394F3D5 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		D5BC941036374222AB66FD49 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
@@ -546,7 +554,12 @@
 		BE1BBF4E1E7688B800C85B58 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				BE1BBF501E768AE200C85B58 /* RCTAmpManager.m */,
+				BE5EA4651E77D63500F60B94 /* RCTAMapView.h */,
+				BE5EA4661E77D63500F60B94 /* RCTAMapView.m */,
+				BE5EA4671E77D63500F60B94 /* RCTAMapViewManager.h */,
+				BE5EA4681E77D63500F60B94 /* RCTAMapViewManager.m */,
+				BE5EA46B1E77ED4B00F60B94 /* AMapViewController.h */,
+				BE5EA46D1E77F76B00F60B94 /* AMapViewController.m */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -1070,7 +1083,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE1BBF511E768AE200C85B58 /* RCTAmpManager.m in Sources */,
+				BE5EA4691E77D63500F60B94 /* RCTAMapView.m in Sources */,
+				BE5EA46A1E77D63500F60B94 /* RCTAMapViewManager.m in Sources */,
+				BE5EA46C1E77ED4B00F60B94 /* AMapViewController.h in Sources */,
+				BE5EA46E1E77F76B00F60B94 /* AMapViewController.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -1193,6 +1209,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ificd.there;
 				PRODUCT_NAME = App;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1216,6 +1233,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ificd.there;
 				PRODUCT_NAME = App;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
