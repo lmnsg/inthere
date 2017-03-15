@@ -39,5 +39,5 @@ const tabBarOptions = {
 	showLabel: false
 }
 
-export default tabBar(tabs, {tabBarOptions})
+export default tabBar(tabs, {initialRouteName: 'Home',tabBarOptions})
 
