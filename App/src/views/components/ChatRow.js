@@ -17,7 +17,7 @@ export default class ChatRow extends React.Component {
 						<Text style={styles.time}>{message.time}</Text>
 					</View>
 
-					<Text style={styles.message}>{message.content}</Text>
+					<Text numberOfLines={1} style={styles.message}>{message.content}</Text>
 				</View>
 			</View>
 		)
@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
 		borderRadius: 25,
 	},
 	contentSide: {
+		marginRight: 10,
 		flex: 1,
 		justifyContent: 'center'
 	},
@@ -53,7 +54,6 @@ const styles = StyleSheet.create({
 		fontWeight: '400'
 	},
 	time: {
-		marginRight: 10,
 		fontSize: 12,
 		color: '#666'
 	},

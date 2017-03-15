@@ -28,7 +28,7 @@ export default class Chat extends React.Component {
 					},
 					message: {
 						time: '上午5:30',
-						content: '蛤蛤蛤蛤蛤， Let me f**k F**k'
+						content: 'https://aos-cdn-image.amap.com/pp/avatar/382/bc/a8/46254869.jpeg?ver=1462197073&imgoss=1https://aos-cdn-image.amap.com/pp/avatar/382/bc/a8/46254869.jpeg?ver=1462197073&imgoss=1'
 					}
 				}
 			])
