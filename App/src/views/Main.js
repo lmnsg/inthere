@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Home from '../views/Home'
-import Chat from '../views/Chat'
+import Chats from '../views/Chats'
 import I from '../views/I'
 import tabBar from '../components/TabBar'
 
@@ -15,8 +15,8 @@ const tabs = {
 			size: 20
 		}
 	},
-	Chat: {
-		screen: Chat,
+	Chats: {
+		screen: Chats,
 		title: '消息',
 		icon: {
 			name: 'ios-chatbubbles-outline',

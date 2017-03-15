@@ -11,10 +11,11 @@
 
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
+#import <React/RCTView.h>
 
 @class RCTEventDispatcher;
 
-@interface RCTAMapView: UIView;
+@interface RCTAMapView: RCTView;
 
 
 @end
