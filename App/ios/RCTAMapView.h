@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+
+
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 
 @class RCTEventDispatcher;
 
-@interface RCTAMapView: UIView
+@interface RCTAMapView: UIView;
 
 
 @end

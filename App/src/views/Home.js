@@ -7,7 +7,7 @@ export default class Home extends React.Component {
 	render() {
 		return (
 			<View>
-				<Amap />
+				<Amap style={{width: 1}} />
 			</View>
 		)
 	}
