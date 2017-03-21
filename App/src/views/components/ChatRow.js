@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, Image, ListView, StyleSheet} from 'react-native'
+import {View, Text, Image, ListView, StyleSheet, TouchableOpacity} from 'react-native'
 
 export default class ChatRow extends React.Component {
 	constructor(props) {
@@ -9,7 +9,7 @@ export default class ChatRow extends React.Component {
 	render() {
 		const {user, message} = this.props.row
 		return (
-			<View style={styles.row}>
+		<TouchableOpacity onPress={this.props.onClick}><View style={styles.row}>
 				<Image style={styles.avatar} source={{uri: user.avatar}} />
 				<View style={styles.contentSide}>
 					<View style={styles.contentSideTop}>
@@ -20,6 +20,7 @@ export default class ChatRow extends React.Component {
 					<Text numberOfLines={1} style={styles.message}>{message.content}</Text>
 				</View>
 			</View>
+		</TouchableOpacity>
 		)
 	}
 }
