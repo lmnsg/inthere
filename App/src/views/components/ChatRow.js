@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, Image, ListView, StyleSheet, TouchableOpacity} from 'react-native'
+import { View, Text, Image, ListView, StyleSheet, TouchableWithoutFeedback } from 'react-native'
 
 export default class ChatRow extends React.Component {
 	constructor(props) {
@@ -7,30 +7,33 @@ export default class ChatRow extends React.Component {
 	}
 
 	render() {
-		const {user, message} = this.props.row
+		const { user, message } = this.props.row
 		return (
-		<TouchableOpacity onPress={this.props.onClick}><View style={styles.row}>
-				<Image style={styles.avatar} source={{uri: user.avatar}} />
-				<View style={styles.contentSide}>
-					<View style={styles.contentSideTop}>
-						<Text style={styles.name}>{user.name}</Text>
-						<Text style={styles.time}>{message.time}</Text>
-					</View>
+			<TouchableWithoutFeedback onPress={this.props.onClick}>
+				<View style={styles.row}>
+					<Image style={styles.avatar} source={{ uri: user.avatar }}/>
+					<View style={styles.contentSide}>
+						<View style={styles.contentSideTop}>
+							<Text style={styles.name}>{user.name}</Text>
+							<Text style={styles.time}>{message.time}</Text>
+						</View>
 
-					<Text numberOfLines={1} style={styles.message}>{message.content}</Text>
+						<Text numberOfLines={1} style={styles.message}>{message.content}</Text>
+					</View>
 				</View>
-			</View>
-		</TouchableOpacity>
+			</TouchableWithoutFeedback>
 		)
 	}
 }
 
-const styles = StyleSheet.create({
+export const rowStyle = {
 	row: {
+		flex: 1,
 		flexDirection: 'row',
 		marginLeft: 20,
 		paddingBottom: 10,
 		paddingTop: 10,
+		backgroundColor: '#fff',
 		borderBottomWidth: 1,
 		borderBottomColor: '#eee'
 	},
@@ -63,4 +66,6 @@ const styles = StyleSheet.create({
 		fontSize: 12,
 		color: '#666'
 	}
-})
+}
+
+const styles = StyleSheet.create(rowStyle)

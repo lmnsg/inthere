@@ -1,6 +1,10 @@
 import React from 'react'
-import {View, Text, SwipeableListView, TouchableOpacity, TouchableHighlight, StyleSheet} from 'react-native'
-import ChatRow from './components/ChatRow'
+import { View, Text, StyleSheet } from 'react-native'
+import SwipeableListView from 'SwipeableListView';
+import SwipeableQuickActions from 'SwipeableQuickActions'
+import SwipeableQuickActionButton from 'SwipeableQuickActionButton'
+
+import ChatRow, { rowStyle } from './components/ChatRow'
 
 const rows = {
 	0: [{
@@ -16,7 +20,7 @@ const rows = {
 		}
 	}],
 	1: [{
-		id: '',
+		id: 2,
 		user: {
 			id: '',
 			name: '艾克',
@@ -30,7 +34,7 @@ const rows = {
 }
 const ds = SwipeableListView.getNewDataSource()
 
-export default class Chat extends React.Component {
+export default class Chats extends React.Component {
 	constructor(props) {
 		super(props)
 
@@ -43,43 +47,35 @@ export default class Chat extends React.Component {
 
 	}
 
+	_removeItem(id) {
+		delete rows[id]
+		this.setState({ dataSource: ds.cloneWithRowsAndSections(rows) })
+	}
+
 	_touchChatRow() {
-		delete rows[0]
-		this.setState({dataSource: ds.cloneWithRowsAndSections(rows)})
+		this.setState({ dataSource: ds.cloneWithRowsAndSections(rows) })
+	}
+
+	_renderActions(sectionId) {
+		return (
+			<SwipeableQuickActions style={styles.rowActions}>
+				<SwipeableQuickActionButton imageSource={{}} text={"❌"}
+				                            style={{width: 50, marginTop: 10}}
+				                            textStyle={{textAlign: 'center', lineHeight: 50}}
+				                            onPress={() => this._removeItem(sectionId)}
+				/>
+			</SwipeableQuickActions>
+		)
 	}
 
 	render() {
 		return (
 			<SwipeableListView
 				style={styles.container}
-				maxSwipeDistance={100}
-				bounceFirstRowOnMount={true}
+				maxSwipeDistance={50}
 				dataSource={this.state.dataSource}
-				renderQuickActions={(row) => <View style={{
-					flex: 1,
-					flexDirection: 'row',
-					justifyContent: 'flex-end',
-					alignItems: 'center'
-				}}>
-					<TouchableHighlight
-						onPress={() => {
-							alert(1)
-						}}>
-						<View style={{
-							backgroundColor: 'red',
-							flex: 1,
-							alignItems: 'center',
-							flexDirection: 'row',
-							paddingHorizontal: 10
-						}}>
-							<Text style={{
-								color: 'white',
-								fontSize: 16
-							}}>删除</Text>
-						</View>
-					</TouchableHighlight>
-				</View>}
-				renderRow={(row) => <ChatRow row={row} onClick={() => this._touchChatRow()}></ChatRow>}
+				renderQuickActions={(rowData, sectionId) => this._renderActions(sectionId)}
+				renderRow={(row) => <ChatRow onClick={() => this._touchChatRow()} row={row}></ChatRow>}
 			/>
 		)
 	}
@@ -88,5 +84,12 @@ export default class Chat extends React.Component {
 const styles = StyleSheet.create({
 	container: {
 		backgroundColor: '#fff'
+	},
+	deleteButton: {
+		width: 50,
+		height: 50,
+		color: 'red',
+		textAlign: 'center',
+		lineHeight: 50
 	}
 })
